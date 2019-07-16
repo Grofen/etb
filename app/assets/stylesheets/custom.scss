@@ -1,0 +1,108 @@
+@import "materialize/components/color-variables";
+//$primary-color: color("yellow", "accent-4") !default;
+//$secondary-color: color("yellow", "base") !default;
+$primary-color: #fd0;
+@import 'materialize';
+@import "font-awesome";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+p {
+  font-size: 15px;
+}
+
+nav {
+  background-color: #fff !important;
+}
+
+.nav-wrapper {
+  a {
+    color: #000;
+  }
+}
+
+.home-slider {
+  background-repeat: no-repeat;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  .caption {
+    width: 30%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-140%, -50%);
+
+    .tires {
+      color: #fd0;
+    }
+  }
+}
+
+.search-container {
+  position: relative;
+
+  .search-tire {
+    position: absolute;
+    background-color: #ffdd00;
+    padding: 0px 38px;
+    //margin-top: -50px;
+    transform: translate(0, -30%);
+    right: 0;
+    left: 0;
+
+    .header {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .input-field {
+      .btn {
+        background-color: #000;
+        margin-top: 1.52rem;
+        display: block;
+      }
+    }
+  }
+}
+
+.who-section {
+  margin: 15rem 0 5rem;
+  text-align: center;
+
+  .header {
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  p {
+    //font-weight: 400;
+    font-size: 1.15rem;
+  }
+}
+
+.page-footer {
+  background-color: #000000;
+  .footer-copyright {
+    font-size: 0.9rem;
+
+    .social-media {
+      margin-right: 5px;
+      font-size: 1rem;
+    }
+  }
+}
