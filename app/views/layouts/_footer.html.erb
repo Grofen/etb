@@ -8,10 +8,9 @@
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Links</h5>
         <ul>
-          <li><a class="white-text text-lighten-3" href="#!">About</a></li>
-          <li><a class="white-text text-lighten-3" href="#!">Contact Us</a></li>
-<!--          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>-->
-<!--          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>-->
+          <li><%= link_to "About", about_path, class: "white-text text-lighten-3" %></li>
+          <li><%= link_to "Contact Us", contact_path, class: "white-text text-lighten-3" %></li>
+          <li><%= link_to "Tyres", tyres_path, class: "white-text text-lighten-3" %></li>
         </ul>
       </div>
     </div>
@@ -19,15 +18,9 @@
   <div class="footer-copyright">
     <div class="container">
       © <%= DateTime.now.year %> Engineering Tires & Batteries
-      <a class="white-text text-lighten-4 right social-media" href="#">
-        <i class="fa fa-facebook-square"></i>
-      </a>
-      <a class="white-text text-lighten-4 right social-media" href="#">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a class="white-text text-lighten-4 right social-media" href="#">
-        <i class="fa fa-envelope"></i>
-      </a>
+      <%= link_to '<i class="fa fa-facebook"></i>'.html_safe, 'https://www.facebook.com/engineering.moustafa.farid/', class: "white-text text-lighten-4 right social-media" %>
+      <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, 'https://www.facebook.com/engineering.moustafa.farid/', class: "white-text text-lighten-4 right social-media" %>
+      <%= mail_to 'admin@example.com', '<i class="fa fa-facebook-square"></i>'.html_safe, class: "white-text text-lighten-4 right social-media" %>
     </div>
   </div>
 </footer>
