@@ -21,7 +21,7 @@ gem 'pundit'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem "font-awesome-rails"
-gem 'carrierwave'
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem 'mini_magick'
 gem 'fog-aws'
 
