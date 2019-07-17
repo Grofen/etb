@@ -1,0 +1,44 @@
+<div class="show-tyre-container container">
+  <div class="row">
+    <div class="col m6">
+      <%= image_tag @tyre.image_url.url %>
+    </div>
+    <div class="col m6">
+      <h3 class="tyre-name"><%= @tyre.name %></h3>
+      <div class="row">
+        <div class="col s4">
+          <span>Brand</span>
+          <p class="tyre-info"><%= @tyre.brand.name %></p>
+          <span>Model</span>
+          <p class="tyre-info"><%= 'FP1000' %></p>
+          <span>Speed</span>
+          <p class="tyre-info"><%= 'V' %></p>
+        </div>
+        <div class="col s6">
+          <span>Size</span>
+          <p class="tyre-info"><i class="fa fa-expand" aria-hidden="true"></i> <%= @tyre.width %> /<%= @tyre.ratio %> R<%= @tyre.rim %></p>
+          </h5>
+          <span>Load</span>
+          <p class="tyre-info"><%= '91' %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <span>Made In</span>
+          <p class="tyre-info"><%= 'Turkey' %></p>
+        </div>
+        <div class="col s4">
+          <span>Year</span>
+          <p class="tyre-info"><%= '2018' %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col m4"></div>
+  </div>
+  <div class="row tyre-description">
+    <h5>Description</h5>
+    <p>The Ohtsu FP1000 has all your driving needs covered. The tire is engineered for optimum performance
+      in dry and wet conditions through an enhanced compound and tread profile. The FP1000 provides value by
+      offering excellent tread life, low noise and even wear throughout the life of the tire.</p>
+  </div>
+</div>

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'tyres', to: 'tyres#index'
+  get '/tyres/:id', to: 'tyres#show', as: 'tyre'
   get 'tyres-education', to: 'tyres#education'
 end

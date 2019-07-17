@@ -89,6 +89,7 @@ nav {
     text-transform: uppercase;
     font-weight: 100;
   }
+
   p {
     //font-weight: 400;
     font-size: 1.15rem;
@@ -97,6 +98,7 @@ nav {
 
 .page-footer {
   background-color: #000000;
+
   .footer-copyright {
     font-size: 0.9rem;
 
@@ -110,24 +112,52 @@ nav {
 // Tyres Page
 .tyres-container {
   margin-bottom: 3rem;
+
   .header {
     text-transform: uppercase;
     font-weight: 500;
     margin-top: 100px;
   }
+
   .sub-header {
     //margin-bottom: 50px;
   }
+
   .filters-header {
     font-size: 1rem;
     margin-bottom: 10px !important;
     font-weight: 600;
   }
+
   [type="checkbox"]:checked + span:not(.lever):before {
     border-right: 2px solid #F44336 !important;
     border-bottom: 2px solid #F44336 !important;
   }
+
   .btn {
     margin-top: 1rem;
+  }
+}
+
+.show-tyre-container {
+  margin-top: 80px;
+
+  .tyre-name {
+    font-weight: 700;
+  }
+
+  span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #838383;
+  }
+
+  .tyre-info {
+    font-size: 1.3rem;
+    margin-top: 0;
+    font-weight: 600;
+  }
+  .tyre-description {
+    margin: 3rem 0;
   }
 }
