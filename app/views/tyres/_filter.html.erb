@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-content">
+    <form action="#">
+      <p class="filters-header">Brands</p>
+      <% obj.each do |brand| %>
+        <p>
+          <label>
+            <input type="checkbox" class="black-text"/>
+            <span><%= brand.name %></span>
+          </label>
+        </p>
+      <% end %>
+      <div>
+        <a class="waves-effect waves-light btn red darken-3">filter</a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -106,3 +106,27 @@ nav {
     }
   }
 }
+
+// Tyres Page
+.tyres-container {
+  .header {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 100px;
+  }
+  .sub-header {
+    //margin-bottom: 50px;
+  }
+  .filters-header {
+    font-size: 1rem;
+    margin-bottom: 10px !important;
+    font-weight: 600;
+  }
+  [type="checkbox"]:checked + span:not(.lever):before {
+    border-right: 2px solid #F44336 !important;
+    border-bottom: 2px solid #F44336 !important;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+}
