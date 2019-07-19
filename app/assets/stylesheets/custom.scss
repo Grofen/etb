@@ -140,13 +140,15 @@ nav {
 
   li {
     font-size: 1.2rem;
+
     i {
       font-size: 1.4rem;
       margin-right: 0.8rem;
     }
   }
 }
-      // Show Page
+
+// Show Page
 .show-tyre-container {
   margin-top: 30px;
 
@@ -179,5 +181,43 @@ nav {
     width: 100%;
     margin-top: 1rem;
     text-transform: capitalize;
+  }
+}
+
+// Education Page
+.education-container {
+  .header, .sub-header {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 5rem;
+  }
+
+  .card {
+    padding: 5%;
+    .card-title {
+      text-decoration: none;
+      color: #000;
+      text-align: center;
+
+      .card-text {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #F44336;
+      }
+
+      img {
+        height: 3rem;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .edu-description {
+    .sub-header {
+      margin-top: 3rem;
+    }
   }
 }
