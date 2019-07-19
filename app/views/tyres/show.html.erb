@@ -1,48 +1,61 @@
 <div class="show-tyre-container container">
   <div class="row">
-    <div class="col m6">
+    <div class="col m6 s12">
       <div class="carousel">
-        <a class="carousel-item" href="#one!"><%= image_tag @tyre.image_url.url %></a>
-        <a class="carousel-item" href="#one!"><%= image_tag @tyre.image_url.url %></a>
-        <a class="carousel-item" href="#one!"><%= image_tag @tyre.image_url.url %></a>
+        <% @tyre.images.each do |image| %>
+          <a class="carousel-item"><%= image_tag image.image_url.url %></a>
+        <% end %>
       </div>
     </div>
-    <div class="col m6">
+    <div class="col m6 s12">
       <h3 class="tyre-name"><%= @tyre.name %></h3>
       <div class="row">
         <div class="col s4">
           <span>Brand</span>
           <p class="tyre-info"><%= @tyre.brand.name %></p>
-          <span>Model</span>
-          <p class="tyre-info"><%= 'FP1000' %></p>
-          <span>Speed</span>
-          <p class="tyre-info"><%= 'V' %></p>
         </div>
-        <div class="col s6">
+        <div class="col s4">
+          <span>Model</span>
+          <p class="tyre-info"><%= @tyre.model %></p>
+        </div>
+        <div class="col s4">
           <span>Size</span>
           <p class="tyre-info"><%= @tyre.width %>/<%= @tyre.ratio %> R<%= @tyre.rim %></p>
-          </h5>
-          <span>Load</span>
-          <p class="tyre-info"><%= '91' %></p>
         </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col s4">
+          <span>Speed</span>
+          <p class="tyre-info"><%= @tyre.speed %></p>
+        </div>
+        <div class="col s4">
           <span>Made In</span>
-          <p class="tyre-info"><%= 'Turkey' %></p>
+          <p class="tyre-info"><%= @tyre.made_in %></p>
         </div>
         <div class="col s4">
           <span>Year</span>
-          <p class="tyre-info"><%= '2018' %></p>
+          <p class="tyre-info"><%= @tyre.year %></p>
+        </div>
+        <div class="col s4">
+          <span>Load</span>
+          <p class="tyre-info"><%= @tyre.load %></p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col s6">
+          <span>Price</span>
+          <p class="tyre-info">EGP <%= @tyre.price %></p>
+        </div>
+        <div class="col s6">
+          <a class="waves-effect waves-light btn red darken-4">Check Out <i class="fa fa-cart-plus"></i></a>
         </div>
       </div>
     </div>
-    <div class="col m4"></div>
   </div>
   <div class="row tyre-description">
     <h5>Description</h5>
-    <p>The Ohtsu FP1000 has all your driving needs covered. The tire is engineered for optimum performance
-      in dry and wet conditions through an enhanced compound and tread profile. The FP1000 provides value by
-      offering excellent tread life, low noise and even wear throughout the life of the tire.</p>
+    <p><%= @tyre.description %></p>
   </div>
 </div>

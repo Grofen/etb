@@ -1,5 +1,0 @@
-class AddImageToTyres < ActiveRecord::Migration[5.2]
-  def change
-    add_column :tyres, :image_url, :string
-  end
-end

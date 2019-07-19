@@ -1,9 +1,9 @@
-ActiveAdmin.register Tyre do
+ActiveAdmin.register Image do
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :width, :ratio, :rim, :brand_id, :year, :made_in, :description, :model, :load, :speed, :season, :price
+  permit_params :image_url, :tyre_id
   #
   # or
   #
@@ -11,10 +11,6 @@ ActiveAdmin.register Tyre do
   #   permitted = [:permitted, :attributes]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
-  # end
-  #
-  # index do
-  #
   # end
   
 end

@@ -5,7 +5,8 @@ class CreateTyres < ActiveRecord::Migration[5.2]
       t.integer :width
       t.integer :ratio
       t.integer :rim
-      t.string :type
+      t.string :season
+      t.float :price
 
       t.timestamps
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_16_212425) do
+ActiveRecord::Schema.define(version: 2019_07_19_084959) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -46,16 +46,30 @@ ActiveRecord::Schema.define(version: 2019_07_16_212425) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "tyre_id"
+    t.index ["tyre_id"], name: "index_images_on_tyre_id"
+  end
+
   create_table "tyres", force: :cascade do |t|
     t.string "name"
     t.integer "width"
     t.integer "ratio"
     t.integer "rim"
-    t.string "type"
+    t.string "season"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "brand_id"
-    t.string "image_url"
+    t.text "description"
+    t.string "model"
+    t.integer "load"
+    t.string "speed"
+    t.string "made_in"
+    t.integer "year"
     t.index ["brand_id"], name: "index_tyres_on_brand_id"
   end
 
