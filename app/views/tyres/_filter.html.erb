@@ -1,18 +1,36 @@
-<div class="card">
+<div class="card _filter">
   <div class="card-content">
-    <form action="#">
-      <p class="filters-header">Brands</p>
+    <%= form_tag tyres_path, :method => :get do %>
       <% obj.each do |brand| %>
         <p>
           <label>
-            <input type="checkbox" class="black-text"/>
+            <%= check_box_tag :brand_id, brand.id %>
             <span><%= brand.name %></span>
           </label>
         </p>
       <% end %>
+      <p>
+        <label>
+          <%= check_box_tag :brand_id, "" %>
+          <span>All</span>
+        </label>
+      </p>
       <div>
-        <a class="waves-effect waves-light btn red darken-3">filter</a>
+<!--        <input type="submit" value="Filter" class="waves-effect waves-light btn red darken-3" />-->
+          <%= submit_tag "Filter", class: "waves-effect waves-light btn red darken-3 white-text"  %>
       </div>
-    </form>
+    <% end %>
   </div>
 </div>
+<%#= form_for(, url: tyres_path, method: :get ) do |f| %>
+<!--      <p class="filters-header">Brands</p>-->
+<%# obj.each do |brand| %>
+<!--        <p>-->
+<!--          <label>-->
+<%#= f.check_box brand.name %>
+
+<!--            <span><%#= brand.name %></span>-->
+<!--          </label>-->
+<!--        </p>-->
+<%# end %>
+<%# end %>

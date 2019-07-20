@@ -1,7 +1,11 @@
 class TyresController < ApplicationController
   before_action :get_tyre, only: [:show]
   def index
-    @tyres = Tyre.all
+    if params[:brand_id].blank?
+      @tyres = Tyre.all
+    else
+      @tyres = Tyre.where('brand_id LIKE ?', "%#{params[:brand_id]}%")
+    end
     @brands = Brand.all
   end
 
