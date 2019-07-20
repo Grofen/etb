@@ -4,7 +4,7 @@ class TyresController < ApplicationController
     if params[:brand_id].blank?
       @tyres = Tyre.all
     else
-      @tyres = Tyre.where('brand_id iLIKE ?', "%#{params[:brand_id]}%")
+      @tyres = Tyre.where('brand_id LIKE ?', "%#{params[:brand_id]}%")
     end
     @brands = Brand.all
   end
