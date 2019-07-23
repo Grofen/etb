@@ -5,7 +5,7 @@ class TyresController < ApplicationController
       @tyres = Tyre.all
     else
       if Rails.env.production?
-        @tyres = Tyre.where('cast(brand_id as text)', "%#{params[:brand_id]}%")
+        @tyres = Tyre.where('cast(brand_id as text) LIKE ?', "%#{params[:brand_id]}%")
       else
         @tyres = Tyre.where('brand_id LIKE ?', "%#{params[:brand_id]}%")
       end
