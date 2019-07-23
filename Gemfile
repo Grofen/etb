@@ -24,6 +24,7 @@ gem "font-awesome-rails"
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem 'mini_magick'
 gem 'fog-aws'
+gem 'activeadmin-trix'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

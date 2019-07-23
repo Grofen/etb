@@ -13,8 +13,24 @@ ActiveAdmin.register Tyre do
   #   permitted
   # end
   #
-  # index do
-  #
-  # end
+  form do |f|
+    f.inputs 'Tyre' do
+      f.input :name
+      f.input :width
+      f.input :ratio
+      f.input :rim
+      f.input :model
+      f.input :load
+      f.input :speed
+      f.input :season
+      f.input :brand
+      f.input :price
+      f.input :made_in
+      f.input :year
+      f.hidden_field :description, id: "tyre-desc"
+      render partial:'../views/layouts/trix_aa'
+      f.submit
+    end
+  end
   
 end
