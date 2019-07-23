@@ -5,9 +5,9 @@ class TyresController < ApplicationController
       @tyres = Tyre.all
     else
       if Rails.env.production?
-        @tyres = Tyre.where('cast(brand_id as text) LIKE ?', "%#{params[:brand_id]}%")
+        @tyres = Tyre.friendly.where('cast(brand_id as text) LIKE ?', "%#{params[:brand_id]}%")
       else
-        @tyres = Tyre.where('brand_id LIKE ?', "%#{params[:brand_id]}%")
+        @tyres = Tyre.friendly.where('brand_id LIKE ?', "%#{params[:brand_id]}%")
       end
     end
     @brands = Brand.all
@@ -23,6 +23,6 @@ class TyresController < ApplicationController
 
   private
   def get_tyre
-    @tyre = Tyre.find(params[:id])
+    @tyre = Tyre.friendly.find(params[:id])
   end
 end

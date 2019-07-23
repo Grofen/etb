@@ -13,6 +13,26 @@ ActiveAdmin.register Tyre do
   #   permitted
   # end
   #
+  index do
+    column :name
+    column :width
+    column :ratio
+    column :rim
+    column :model
+    column :load
+    column :speed
+    column :brand
+    column :price
+    column :made_in
+    column :year
+    column :description do |tyre|
+      tyre.description[0...100]
+    end
+    column :created_at
+    column :updated_at
+    actions
+  end
+
   form do |f|
     f.inputs "Tyre" do
       f.input :name
@@ -31,5 +51,4 @@ ActiveAdmin.register Tyre do
     end
     f.submit
   end
-  
 end

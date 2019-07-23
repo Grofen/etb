@@ -25,6 +25,7 @@ gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'activeadmin_quill_editor'
+gem 'friendly_id', '~> 5.2.4'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
