@@ -13,8 +13,23 @@ ActiveAdmin.register Tyre do
   #   permitted
   # end
   #
-  # index do
-  #
-  # end
+  form do |f|
+    f.inputs "Tyre" do
+      f.input :name
+      f.input :width
+      f.input :ratio
+      f.input :rim
+      f.input :model
+      f.input :load
+      f.input :speed
+      f.input :season
+      f.input :brand
+      f.input :price
+      f.input :made_in
+      f.input :year
+      f.input :description, as: :quill_editor
+    end
+    f.submit
+  end
   
 end
