@@ -23,6 +23,7 @@ ActiveAdmin.register Tyre do
     column :speed
     column :brand
     column :price
+    column :season
     column :made_in
     column :year
     column :description do |tyre|

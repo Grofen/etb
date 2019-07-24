@@ -12,4 +12,24 @@ permit_params :name, :description, :logo
 #   permitted
 # end
 
+  form do |f|
+    f.inputs "Brand" do
+      f.input :name
+      f.input :description, as: :quill_editor
+      f.input :logo
+    end
+    f.submit
+  end
+
+  index do
+    column :name
+    column :description do |brand|
+      brand.description[0...100]
+    end
+    column :logo do |brand|
+      image_tag brand.logo.url
+    end
+    actions
+  end
+
 end
