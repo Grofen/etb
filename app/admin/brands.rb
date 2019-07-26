@@ -26,9 +26,7 @@ permit_params :name, :description, :logo
     column :description do |brand|
       brand.description[0...100]
     end
-    column :logo do |brand|
-      image_tag brand.logo.url
-    end
+    column :logo
     actions
   end
 
