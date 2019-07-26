@@ -20,6 +20,6 @@ ActiveAdmin.register Education do
       f.input :title
       f.input :description, as: :quill_editor
     end
+    f.submit
   end
-  
 end

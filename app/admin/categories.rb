@@ -12,5 +12,12 @@ ActiveAdmin.register Category do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+  #
+  form do |f|
+    inputs do
+      f.input :name
+      f.input :icon_name
+    end
+    f.submit
+  end
 end
